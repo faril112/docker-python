@@ -20,9 +20,8 @@ jobs:
           credentials_json: ${{key}}
       - name: 'Deploy Cloud Function gen2 using gcloud command'
         run: >-
-        gcloud run jobs deploy docker-python
-        --project=canvas-abacus-416507
-        --region=us-central1
-        --no-allow-unauthenticated
-        --gen2
+        gcloud run jobs deploy docker-python \
+        --project=canvas-abacus-416507 \
+        --region=us-central1 \
+        --no-allow-unauthenticated \
         --service-account=988242885954-compute@developer.gserviceaccount.com
