@@ -23,5 +23,5 @@ jobs:
          gcloud run jobs deploy docker-python \
           --project=canvas-abacus-416507 \
           --region=us-central1 \
-          --no-allow-unauthenticated \
-          --service-account=988242885954-compute@developer.gserviceaccount.com
+          --service-account=988242885954-compute@developer.gserviceaccount.com \
+          --source=. 
