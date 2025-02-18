@@ -18,10 +18,10 @@ jobs:
         uses: 'google-github-actions/auth@v1'
         with:
           credentials_json: ${{key}}
-      - name: 'Deploy Cloud Function gen2 using gcloud command'
-        run: >-
-        gcloud run jobs deploy docker-python \
-        --project=canvas-abacus-416507 \
-        --region=us-central1 \
-        --no-allow-unauthenticated \
-        --service-account=988242885954-compute@developer.gserviceaccount.com
+      - name: Deploy to Cloud Run
+        run: |-
+         gcloud run jobs deploy docker-python \
+          --project=canvas-abacus-416507 \
+          --region=us-central1 \
+          --no-allow-unauthenticated \
+          --service-account=988242885954-compute@developer.gserviceaccount.com
